@@ -7,6 +7,7 @@ lubuntu使用shadowsocks翻墙
 http_proxy=http://myproxy.server.com:8080/
 https_proxy=http://myproxy.server.com:8080/
 ftp_proxy=http://myproxy.server.com:8080/
+
     因为 shadowsocks 在本地也使用的是 socks5 协议，以上方案是把 http 流量装换成另一个方向的 http 流量，是不行的。 shadowsocks 有个选项http(s)，但是试一下不行，不知道为什么。甚至把以上内容写入 /etc/environment 以后 shadowsocks 直接连不上服务器。我猜是因为 shadowsocks 的流量也要按照 /etc/environment 的配置走，虽然里边没有 socks5_proxy 。我就不追究了。
 
     现在就需要把 http 的流量转换为 socks5 。我用的 proxychains （参见Linux 下使用 SSR + ProxyChains 代理终端流量），也可以用 privoxy （参见Ubuntu 终端使用shadowsocks全局代理）。chrome 浏览器需要插件 SwitchyOmega （Chrome + Proxy SwitchyOmega 设置）。用 crx 安装的插件，文件夹不能移动到别处，移走了浏览器的插件也没了，好神奇。如果有别的软件还需要专门转换。
