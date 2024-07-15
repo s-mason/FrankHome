@@ -1,11 +1,11 @@
-lubuntu使用酸酸乳
+lubuntu使用SSR 酸酸乳
 
     不知道为什么以下方法对lubuntu没用：
     # export http_proxy=http://129.156.243.243:3128
     # export https_proxy=http://129.156.243.243:3128    
     我猜以上方案是把 http 流量转换成 http 流量，所以不行。
 
-    现在就需要把 http 的流量转换为 ss5 。我用的 proxychains （参见Linux 下使用 SSR + ProxyChains 代李终端流量https://abelsu7.top/2019/02/24/ssr-proxychains4-on-linux/），也可以用 privoxy （参见Ubuntu 终端使用sss全局代里https://www.ichenfei.com/ubuntu%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8shadowssocks%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86.html）。chrome 浏览器需要插件 SwitchyOmega （Chrome + Proxy SwitchyOmega 设置https://github.com/Shadowsocks-Wiki/shadowsocks/blob/master/7-2-chrome-setup-guide-cn.md）。用 crx 安装的插件，文件夹不能移动到别处，移走了浏览器的插件也没了，好神奇。
+    现在就需要把 http 的流量转换为 ss5 。我用的 proxychains （参见Linux 下使用 SSR + ProxyChains 代理终端流量https://abelsu7.top/2019/02/24/ssr-proxychains4-on-linux/），也可以用 privoxy （参见Ubuntu 终端使用sss全局代里https://www.ichenfei.com/ubuntu%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8shadowssocks%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86.html）。chrome 浏览器需要插件 SwitchyOmega （Chrome + Proxy SwitchyOmega 设置https://github.com/Shadowsocks-Wiki/shadowsocks/blob/master/7-2-chrome-setup-guide-cn.md）。用 crx 安装的插件，文件夹不能移动到别处，移走了浏览器的插件也没了，好神奇。
 
     注意：proxychains 只是把终端流量引向 ss 代理，别的软件流量依然不会通过 ss 代理，使用别的软件还需要专门用什么工具去转换。下面介绍几个从网上搜集的但是我没有实际测试的全局代理的方法：
 
