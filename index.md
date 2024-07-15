@@ -11,7 +11,7 @@
         <div style="text-align: center;width:60%">
             <p style="font-size: 12px;">&nbsp;</p>
             <p style="font-size: 18px;">1.
-                <a href="https://github.com/s-mason/FrankHome/blob/master/123.pdf">
+                <a href="linux_use_SSR_2019.md">
                     关于Linux相关系统配置SSR的问题（2019年发布）
                 </a>
             </p>
